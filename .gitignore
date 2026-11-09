@@ -1,0 +1,5 @@
+build/
+renders/
+work/
+audio/
+__pycache__/

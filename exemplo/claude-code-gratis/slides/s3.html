@@ -1,0 +1,28 @@
+<div class="mono abs" id="p3" style="left:64px;top:170px">passo 01 · o motor</div>
+<div class="kicker abs" id="k3" style="left:64px;top:225px">o carro é o Claude Code.</div>
+<div class="abs" id="ol" style="left:64px;top:300px"><span class="big mid">OLLAMA.</span></div>
+<div class="term" id="term" style="left:64px;top:560px;width:952px;height:330px">
+  <div><span class="p">&gt;</span> <span id="l1"></span></div>
+  <div><span class="p">&gt;</span> <span id="l2"></span></div>
+  <div><span class="p">&gt;</span> <span id="l3"></span></div>
+</div>
+<div class="sub abs" id="sub3" style="left:64px;top:930px;width:900px">o motor que roda o modelo <b>no seu PC</b>.</div>
+<span class="tag swipe" id="sw">arrasta →</span>
+<script>
+CV.split('#k3'); CV.split('#sub3');
+CV.entra('#p3', 0); CV.palavras('#k3', 0, 0.15);
+CV.entra('#ol', 0.5, { yPercent: 70, opacity: 0, filter: 'blur(14px)' }, 0.4, 'back.out(1.5)');
+CV.entra('#term', 1, { y: 80, rotationX: 25, opacity: 0, filter: 'blur(10px)' }, 0.45);
+CV.digita('#l1', 'irm ollama.com/install.ps1 | iex', 2, 24);
+CV.digita('#l2', 'ollama pull gemma4:12b', 3.5, 18);
+CV.digita('#l3', 'ollama launch claude', 5, 18);
+CV.palavras('#sub3', 5.5, 0.15);
+CV.pop('#sw', 6);
+CV.bola('#bola', [
+  [0, -100, 300], [1.5, 900, 512, { cai: true, sq: true }],
+  [3, 900, 512], [3.25, 930, 400], [3.5, 900, 512, { cai: true, sq: true }],
+  [4.5, 900, 512], [4.75, 930, 400], [5, 900, 512, { cai: true, sq: true }],
+  [6, 900, 1060, { cai: true, sq: true }], [6.75, 1000, 900], [7.8, 1200, 1000]
+]);
+CV.saida();
+</script>

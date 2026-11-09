@@ -1,0 +1,37 @@
+<div class="kicker abs" id="k6" style="left:64px;top:230px">vai instalar depois?</div>
+<div class="abs" id="sv" style="left:64px;top:320px"><span class="big">SALVA.</span></div>
+<svg class="abs" id="bm" style="left:770px;top:330px" width="170" height="220" viewBox="0 0 170 220">
+  <path d="M20 12 h130 v196 l-65 -48 l-65 48 z" fill="none" stroke="#dff3ff" stroke-width="12" stroke-linejoin="round"/>
+  <clipPath id="bmc"><path d="M20 12 h130 v196 l-65 -48 l-65 48 z"/></clipPath>
+  <rect id="bmf" clip-path="url(#bmc)" x="0" y="0" width="170" height="220" fill="#ff7a3d"/>
+</svg>
+<div class="sub abs" id="sub6" style="left:64px;top:610px;width:940px">passo a passo completo e <b>guia grátis em PDF</b> no meu YouTube.</div>
+<div class="abs" id="yt" style="left:64px;top:790px;display:flex;align-items:center;gap:22px">
+  <svg width="96" height="68" viewBox="0 0 96 68"><rect width="96" height="68" rx="18" fill="#ff2a2a"/><path d="M38 20 l26 14 l-26 14 z" fill="#fff"/></svg>
+  <span style="font:800 54px 'CV Sans';color:#fff">@celticmatheus1</span>
+</div>
+<div class="abs" style="left:64px;top:930px;width:960px;height:80px">
+  <span class="tag abs" id="c1" style="left:0">salva</span>
+  <span class="tag abs" id="c2" style="left:160px">manda pra um amigo</span>
+  <span class="tag hot abs" id="c3" style="left:520px">segue p/ mais</span>
+</div>
+<script>
+CV.split('#k6'); CV.split('#sub6');
+CV.palavras('#k6', 0, 0.2);
+CV.entra('#sv', 0.5, { yPercent: 70, opacity: 0, filter: 'blur(14px)' }, 0.4, 'back.out(1.5)');
+CV.entra('#bm', 1, { y: -60, opacity: 0, rotation: -8, filter: 'blur(8px)' }, 0.4, 'back.out(2)');
+tl.fromTo('#bmf', { attr: { y: 220 } }, { attr: { y: 0 }, duration: 0.2, ease: 'power2.out' }, b(2));
+CV.soco('#bm', 2, 1.12);
+CV.palavras('#sub6', 2.5, 0.12);
+CV.entra('#yt', 4, { scale: .6, opacity: 0, filter: 'blur(10px)' }, 0.4, 'back.out(2)');
+['#c1', '#c2', '#c3'].forEach((c, k) => CV.pop(c, 5 + k * 0.5));
+CV.bola('#bola', [
+  [0, -100, 300], [1, 500, 180], [2, 855, 420, { cai: true }],
+  [4, 855, 420], [4.5, 710, 830, { cai: true, sq: true }],
+  [4.75, 400, 860], [5, 120, 906, { cai: true, sq: true }], [5.25, 250, 860], [5.5, 330, 906, { cai: true, sq: true }],
+  [5.75, 560, 860], [6, 680, 906, { cai: true, sq: true }],
+  [7, 680, 906], [7.8, 1200, 1000]
+]);
+tl.to('#bola', { scale: 0, duration: 0.15 }, b(2.05)); tl.to('#bola', { scale: 1, duration: 0.25, ease: 'back.out(2)' }, b(4));
+CV.saida();
+</script>

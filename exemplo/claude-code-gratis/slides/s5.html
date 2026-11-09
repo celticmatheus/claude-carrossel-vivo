@@ -1,0 +1,34 @@
+<style>
+.row { position: absolute; left: 64px; width: 952px; }
+.row .lb { font: 700 28px "CV Sans"; color: var(--ice); margin-bottom: 12px; }
+.row .lb i { font: italic 400 26px "CV Serif"; color: var(--dim); }
+.row .bar { height: 46px; border-radius: 23px; background: linear-gradient(90deg, var(--blue), var(--cyan)); box-shadow: 0 0 24px rgba(95,212,255,.4); transform-origin: 0 50%; }
+.row .tm { position: absolute; top: 46px; font: 700 34px "CV Mono"; color: var(--ice); }
+</style>
+<div class="mono abs" id="p5" style="left:64px;top:170px">o teste · "cria uma calculadora"</div>
+<div class="kicker abs" id="k5" style="left:64px;top:225px">o Claude Code local fez em</div>
+<div class="abs" id="tempo" style="left:64px;top:300px"><span class="big" id="tnum">0:00</span></div>
+<div class="row" id="r1" style="top:600px"><div class="lb">Claude Code + Gemma 4 12B <i>· Ollama</i></div><div class="bar" style="width:304px"></div><div class="tm" style="left:324px">1:54 ✓</div></div>
+<div class="row" id="r2" style="top:740px"><div class="lb">OpenCode + Qwen3 Coder <i>· Ollama</i></div><div class="bar" style="width:307px"></div><div class="tm" style="left:327px">1:55 ✓</div></div>
+<div class="row" id="r3" style="top:880px"><div class="lb">Claude Code + Qwen3 Coder 30B <i>· não coube na placa</i></div><div class="bar" style="width:760px"></div><div class="tm" style="left:780px">4:45 ✓</div></div>
+<div class="mono abs" id="pc" style="left:64px;top:1030px;width:952px;line-height:1.5">meu PC: Radeon RX 7900 XT 20 GB · 32 GB RAM<br>projeto grande? o Claude pago ainda é melhor.</div>
+<span class="tag swipe" id="sw" style="bottom:150px">arrasta →</span>
+<script>
+CV.entra('#p5', 0); CV.split('#k5'); CV.palavras('#k5', 0, 0.15);
+CV.entra('#tempo', 0.5, { scale: .7, opacity: 0, filter: 'blur(14px)' }, 0.35, 'back.out(1.8)');
+CV.conta('#tnum', 0, 114, 0.5, 2, (v) => { v = Math.round(v); return Math.floor(v / 60) + ':' + String(v % 60).padStart(2, '0') + (v === 114 ? '.' : ''); });
+CV.soco('#tempo', 2.5, 1.06);
+['#r1', '#r2', '#r3'].forEach((r, k) => {
+  CV.entra(r + ' .lb', 3 + k * 0.5, { x: -40, opacity: 0, filter: 'blur(8px)' }, 0.3);
+  tl.fromTo(r + ' .bar', { scaleX: 0 }, { scaleX: 1, duration: b(k === 2 ? 1.5 : 0.75), ease: 'power3.out' }, b(3 + k * 0.5));
+  CV.pop(r + ' .tm', 3.75 + k * 0.5 + (k === 2 ? 0.75 : 0));
+});
+CV.entra('#pc', 5.5);
+CV.pop('#sw', 6);
+CV.bola('#bola', [
+  [0, -100, 300], [1, 300, 200], [2.5, 560, 285, { cai: true, sq: true }],
+  [3.5, 700, 760], [4.5, 700, 878, { cai: true, sq: true }],
+  [5.5, 870, 950], [6, 900, 1080, { cai: true, sq: true }], [6.75, 1000, 920], [7.8, 1200, 1000]
+]);
+CV.saida();
+</script>

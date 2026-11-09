@@ -1,0 +1,25 @@
+<div class="kicker abs" id="k1" style="left:64px;top:230px">seu Claude Code é</div>
+<div class="abs" id="pago" style="left:64px;top:320px"><span class="big">PAGO.</span></div>
+<div class="abs" id="risco" style="left:56px;top:432px;width:640px;height:18px;border-radius:9px;background:var(--ball);box-shadow:0 0 20px var(--ball)"></div>
+<div class="abs" id="gratis" style="left:64px;top:320px"><span class="big">GRÁTIS.</span></div>
+<div class="sub abs" id="sub1" style="left:64px;top:640px;width:900px">roda no <b>seu</b> computador.</div>
+<div class="mono foot" id="f1">testado no meu PC</div>
+<span class="tag swipe" id="sw">arrasta →</span>
+<script>
+CV.split('#k1'); CV.split('#sub1');
+CV.palavras('#k1', 0, 0.2);
+CV.entra('#pago', 0.5, { yPercent: 60, opacity: 0, filter: 'blur(14px)' }, 0.4);
+tl.fromTo('#risco', { scaleX: 0, transformOrigin: '0% 50%' }, { scaleX: 1, duration: b(1), ease: 'power2.inOut' }, b(1.5));
+tl.to(['#pago', '#risco'], { y: 700, rotation: 9, opacity: 0, duration: b(1), ease: 'power2.in' }, b(3));
+CV.entra('#gratis', 4, { yPercent: 70, scale: .85, opacity: 0, filter: 'blur(16px)' }, 0.45, 'back.out(1.6)');
+CV.palavras('#sub1', 4.5, 0.25);
+CV.entra('#f1', 5);
+CV.pop('#sw', 6);
+CV.bola('#bola', [
+  [0, -100, 150], [1.5, 50, 300, { cai: true, sq: true }],
+  [2.5, 700, 441, { ex: 'power2.inOut' }],
+  [3, 820, 300], [3.75, 900, 560, { cai: true, sq: true }],
+  [5, 960, 300], [6, 900, 1060, { cai: true, sq: true }], [6.75, 1000, 900], [7.8, 1200, 1000]
+]);
+CV.saida();
+</script>

@@ -1,0 +1,20 @@
+{
+  "titulo": "Claude Code de graça no seu PC",
+  "topo": "Claude Code · R$0",
+  "bpm": 120,
+  "estilo": "tech",
+  "slides": [
+    {"arquivo": "slides/s1.html", "compassos": 2, "energia": 3,
+     "sfx": [[0, "hit"], [1.5, "pop"], [2, "whoosh"], [3.5, "thump"], [4, "hit"], [6, "pop"], [7.5, "swoosh"]]},
+    {"arquivo": "slides/s2.html", "compassos": 2, "energia": 3,
+     "sfx": [[0, "hit"], [2, "pop"], [2.5, "pop"], [3, "pop"], [3.5, "pop"], [6, "pop"], [7.5, "swoosh"]]},
+    {"arquivo": "slides/s3.html", "compassos": 2, "energia": 3,
+     "sfx": [[0, "hit"], [1.5, "pop"], [2, "type"], [3.5, "type"], [5, "type"], [6, "pop"], [7.5, "swoosh"]]},
+    {"arquivo": "slides/s4.html", "compassos": 2, "energia": 3,
+     "sfx": [[0, "hit"], [1, "riser"], [3, "hit"], [4, "pop"], [6, "pop"], [7.5, "swoosh"]]},
+    {"arquivo": "slides/s5.html", "compassos": 2, "energia": 3,
+     "sfx": [[0, "hit"], [0.5, "tick"], [1, "tick"], [1.5, "tick"], [2.5, "ding"], [3, "pop"], [3.5, "pop"], [4, "pop"], [6, "pop"], [7.5, "swoosh"]]},
+    {"arquivo": "slides/s6.html", "compassos": 2, "energia": 2,
+     "sfx": [[0, "hit"], [2, "shutter"], [2.1, "ding"], [4, "pop"], [5, "pop"], [5.5, "pop"], [6, "pop"]]}
+  ]
+}

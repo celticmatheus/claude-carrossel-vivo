@@ -1,0 +1,24 @@
+<div class="mono abs" id="p4" style="left:64px;top:170px">passo 02 · o detalhe</div>
+<div class="kicker abs" id="k4" style="left:64px;top:225px">contexto do Ollama em</div>
+<div class="abs" id="ctx" style="left:64px;top:300px"><span class="big" style="font-size:330px">64K.</span></div>
+<div class="term" id="term" style="left:64px;top:700px;width:952px;height:170px;font-size:28px">
+  <div><span class="p">&gt;</span> <span id="l1"></span></div>
+</div>
+<div class="sub abs" id="sub4" style="left:64px;top:910px;width:900px">depois reabre o Ollama e <b>confere se o arquivo foi criado</b>.</div>
+<span class="tag swipe" id="sw">arrasta →</span>
+<script>
+CV.split('#k4'); CV.split('#sub4');
+CV.entra('#p4', 0); CV.palavras('#k4', 0, 0.15);
+CV.entra('#ctx', 0.5, { scale: 1.4, opacity: 0, filter: 'blur(20px)' }, 0.4);
+CV.soco('#ctx', 3, 1.06);
+CV.entra('#term', 1, { y: 60, opacity: 0, filter: 'blur(10px)' }, 0.4);
+CV.digita('#l1', "OLLAMA_CONTEXT_LENGTH = 65536", 1.5, 20);
+CV.palavras('#sub4', 4, 0.15);
+CV.pop('#sw', 6);
+CV.bola('#bola', [
+  [0, -100, 300], [1.5, 500, 150], [3, 700, 330, { cai: true, sq: true }],
+  [4, 800, 230], [5, 940, 652, { cai: true, sq: true }],
+  [6, 900, 1060, { cai: true, sq: true }], [6.75, 1000, 900], [7.8, 1200, 1000]
+]);
+CV.saida();
+</script>

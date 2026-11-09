@@ -1,0 +1,26 @@
+<div class="kicker abs" id="k2" style="left:64px;top:230px">o modelo de IA roda no</div>
+<div class="abs" id="pc" style="left:64px;top:320px"><span class="big">SEU PC.</span></div>
+<div class="abs" style="left:64px;top:700px;width:960px;height:80px">
+  <span class="tag abs" id="t1" style="left:0">Ollama</span>
+  <span class="tag abs" id="t2" style="left:180px">Gemma 4 12B</span>
+  <span class="tag abs" id="t3" style="left:450px">sem limite</span>
+  <span class="tag hot abs" id="t4" style="left:700px">R$0</span>
+</div>
+<div class="sub abs" id="sub2" style="left:64px;top:840px;width:900px">sem assinatura. sem internet pra pensar.</div>
+<span class="tag swipe" id="sw">arrasta →</span>
+<script>
+CV.split('#k2'); CV.split('#sub2');
+CV.palavras('#k2', 0, 0.15);
+CV.entra('#pc', 0.5, { yPercent: 70, opacity: 0, filter: 'blur(14px)' }, 0.4, 'back.out(1.5)');
+['#t1', '#t2', '#t3', '#t4'].forEach((t, k) => CV.pop(t, 2 + k * 0.5));
+CV.palavras('#sub2', 4.5, 0.2);
+CV.pop('#sw', 6);
+CV.bola('#bola', [
+  [0, -100, 300], [1, 300, 560], [2, 139, 652, { cai: true, sq: true }],
+  [2.25, 250, 560], [2.5, 364, 652, { cai: true, sq: true }],
+  [2.75, 500, 560], [3, 624, 652, { cai: true, sq: true }],
+  [3.25, 720, 560], [3.5, 814, 652, { cai: true, sq: true }],
+  [5, 870, 950], [6, 900, 1060, { cai: true, sq: true }], [6.75, 1000, 900], [7.8, 1200, 1000]
+]);
+CV.saida();
+</script>

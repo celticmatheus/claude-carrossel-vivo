@@ -1,0 +1,85 @@
+/* CARROSSEL VIVO — tema "tech-blue" do canal (1080x1350, 4:5 do Instagram) */
+@font-face { font-family: "CV Sans"; src: url("fonts/Inter.woff2") format("woff2"); font-weight: 100 900; }
+@font-face { font-family: "CV Cond"; src: url("fonts/Anton.woff2") format("woff2"); }
+@font-face { font-family: "CV Serif"; src: url("fonts/PlayfairDisplay-Italic.woff2") format("woff2"); font-style: italic; font-weight: 400 900; }
+@font-face { font-family: "CV Serif"; src: url("fonts/PlayfairDisplay-Roman.woff2") format("woff2"); font-weight: 400 900; }
+@font-face { font-family: "CV Mono"; src: url("fonts/SpaceGrotesk.woff2") format("woff2"); font-weight: 300 700; }
+
+:root {
+  --navy: #050d24;   --navy-2: #0a1a45;  --blue: #1f4fff;  --cyan: #5fd4ff;
+  --ice: #dff3ff;    --cream: #f4efe3;   --ball: #ff7a3d;  --ball-2: #d9572a;
+  --dim: rgba(223, 243, 255, .55);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1350px; background: var(--navy); overflow: hidden; }
+#root { position: relative; width: 1080px; height: 1350px; overflow: hidden; font-family: "CV Sans", sans-serif; color: var(--ice); }
+.abs { position: absolute; }
+
+/* fundo vivo */
+.bg { position: absolute; inset: 0; background: radial-gradient(120% 90% at 50% 0%, var(--navy-2) 0%, var(--navy) 62%); }
+.bg .grid { position: absolute; inset: -20%; background-image:
+  linear-gradient(rgba(95,212,255,.07) 1.5px, transparent 1.5px), linear-gradient(90deg, rgba(95,212,255,.07) 1.5px, transparent 1.5px);
+  background-size: 90px 90px; }
+.bg .glow { position: absolute; width: 900px; height: 900px; border-radius: 50%; filter: blur(60px); opacity: .55;
+  background: radial-gradient(circle, rgba(31,79,255,.75), transparent 65%); }
+.bg .glow.g2 { background: radial-gradient(circle, rgba(95,212,255,.35), transparent 65%); width: 700px; height: 700px; }
+.bg .sheen { position: absolute; top: -40%; left: -60%; width: 40%; height: 180%; transform: rotate(18deg);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.06), transparent); }
+.bg .vig { position: absolute; inset: 0; background: radial-gradient(120% 100% at 50% 50%, transparent 55%, rgba(0,0,0,.55)); }
+
+/* barra do topo */
+.top { position: absolute; left: 64px; right: 64px; top: 52px; display: flex; justify-content: space-between; align-items: center;
+  font: 600 22px "CV Mono"; letter-spacing: .14em; text-transform: uppercase; color: var(--dim); }
+.top .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--ball); margin-right: 12px; box-shadow: 0 0 14px var(--ball); }
+.top .count { padding: 6px 14px; border: 1.5px solid rgba(95,212,255,.45); border-radius: 30px; color: var(--ice); }
+
+/* tipografia em 3 níveis */
+.kicker { font: italic 500 62px/1.05 "CV Serif"; color: var(--ice); }
+.big { font: 400 250px/0.9 "CV Cond"; letter-spacing: -.005em; text-transform: uppercase;
+  background: linear-gradient(180deg, #ffffff 0%, #e8f6ff 45%, #8fd8ff 100%); -webkit-background-clip: text; background-clip: text; color: transparent;
+  display: block; width: max-content; padding: .14em .04em .03em 0; margin-top: -.08em; /* Anton: medido nos quadros → topo da letra ≈ top + 10px */ filter: drop-shadow(0 8px 30px rgba(31,79,255,.55)); }
+.big.mid { font-size: 190px; }  .big.sm { font-size: 140px; }
+.sub { font: italic 400 40px/1.25 "CV Serif"; color: var(--dim); }
+.sub b { font-style: normal; font-family: "CV Sans"; font-weight: 800; color: var(--ice); }
+.mono { font: 600 24px "CV Mono"; letter-spacing: .12em; text-transform: uppercase; color: var(--dim); }
+
+/* palavra que sobe da máscara */
+.m { display: inline-block; overflow: hidden; vertical-align: top; padding: 0 .02em .06em; margin-bottom: -.06em; }
+.m > .w { display: inline-block; }
+
+/* tags de vidro */
+.tag { display: inline-flex; align-items: center; gap: 10px; padding: 12px 22px; border-radius: 40px;
+  font: 700 26px "CV Mono"; letter-spacing: .08em; text-transform: uppercase; color: var(--ice);
+  background: linear-gradient(180deg, rgba(95,212,255,.22), rgba(31,79,255,.18)); border: 1.5px solid rgba(95,212,255,.55);
+  box-shadow: 0 0 24px rgba(95,212,255,.25), inset 0 1px 0 rgba(255,255,255,.25); }
+.tag.hot { background: var(--ball); border-color: #ffb08a; color: #1a0a03; box-shadow: 0 0 30px rgba(255,122,61,.55); }
+
+/* cartão com brilho */
+.card { position: absolute; border-radius: 26px; overflow: hidden; border: 2px solid rgba(95,212,255,.75);
+  box-shadow: 0 0 40px rgba(95,212,255,.35), 0 30px 60px rgba(0,0,0,.5); background: #0b1430; }
+.card img, .card video { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* terminal */
+.term { position: absolute; border-radius: 22px; background: rgba(3,8,22,.88); border: 1.5px solid rgba(95,212,255,.45);
+  box-shadow: 0 0 40px rgba(31,79,255,.35); padding: 70px 34px 30px; font: 500 34px/1.5 "CV Mono"; color: #c9f1ff; }
+.term::before { content: ""; position: absolute; left: 26px; top: 26px; width: 16px; height: 16px; border-radius: 50%;
+  background: #ff5f57; box-shadow: 26px 0 0 #febc2e, 52px 0 0 #28c840; }
+.term .p { color: var(--ball); }
+
+/* bola */
+.ball { position: absolute; width: 96px; height: 96px; margin: -48px 0 0 -48px; border-radius: 50%; left: 0; top: 0;
+  background: radial-gradient(circle at 34% 30%, #ffc09c 0%, var(--ball) 38%, var(--ball-2) 100%);
+  box-shadow: 0 0 40px rgba(255,122,61,.6); will-change: transform; z-index: 30; }
+.shadow { position: absolute; width: 110px; height: 22px; margin-left: -55px; border-radius: 50%; background: rgba(0,0,0,.45); filter: blur(6px); }
+
+/* régua de tempo que atravessa os slides */
+.ruler { position: absolute; left: 0; right: 0; bottom: 70px; height: 70px; }
+.ruler .line { position: absolute; left: 0; right: 0; top: 0; height: 2px; background: rgba(95,212,255,.35); }
+.ruler .tk { position: absolute; top: 0; width: 2px; height: 14px; background: rgba(95,212,255,.45); }
+.ruler .tk.mj { height: 26px; background: rgba(95,212,255,.8); }
+.ruler .tc { position: absolute; top: 34px; font: 500 18px "CV Mono"; color: var(--dim); transform: translateX(-50%); }
+.ruler .head { position: absolute; top: -14px; width: 3px; height: 52px; background: var(--ball); box-shadow: 0 0 12px var(--ball); }
+.ruler .head::before { content: ""; position: absolute; left: -9px; top: -10px; border: 10px solid transparent; border-top-color: var(--ball); }
+
+.swipe { position: absolute; right: 64px; bottom: 170px; }
+.foot { position: absolute; left: 64px; bottom: 170px; }
