@@ -8,6 +8,8 @@ então arrastar parece uma música só. Custo: **R$0**. Nada de modelo de vídeo
 Mostrada no vídeo do canal [@celticmatheus1](https://www.youtube.com/@celticmatheus1).
 
 ## Dois modos
+![slide 1 do exemplo](exemplo/claude-code-gratis/slide1.jpg)
+
 1. **Motion puro (sem imagem)** — palavras gigantes, uma bola laranja que atravessa o carrossel inteiro e uma régua
    de tempo embaixo. Exemplo completo em `exemplo/claude-code-gratis/` (prévia: `previa_carrossel.mp4`).
 2. **Com a sua foto** — a foto é recortada (sem fundo) e montada em camadas: fundo → palavra gigante → você →
