@@ -1,5 +1,8 @@
 # Skill grátis: Carrossel vivo com o Claude
 
+Feita por [Matheus Celtic](https://matheusceltic.com), criador da Criadores IA. Guia completo em português: [matheusceltic.com/guias/carrossel-instagram-que-mexe-ia/](https://matheusceltic.com/guias/carrossel-instagram-que-mexe-ia/) · [YouTube](https://www.youtube.com/@celticmatheus1)
+
+
 Skill para o **Claude** (Claude Code / app no computador) criar **carrosséis do Instagram em que todo slide se mexe**:
 cada slide é um vídeo curto em loop (1080x1350, 4:5, 30 fps), com motion design feito por código, **música e efeitos
 sonoros também gerados por código** e tudo caindo na batida de 120 BPM. A música continua de um slide para o outro,
